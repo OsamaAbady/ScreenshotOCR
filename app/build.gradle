@@ -1,17 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
 }
 
 android {
     namespace "com.example.screenshotocr"
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.screenshotocr"
         minSdk 26
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         
@@ -60,17 +59,17 @@ dependencies {
     // ML Kit OCR (offline)
     implementation "com.google.mlkit:text-recognition:16.0.0"
 
-    // Room + FTS
-    implementation "androidx.room:room-runtime:2.6.1"
-    implementation "androidx.room:room-ktx:2.6.1"
-    kapt "androidx.room:room-compiler:2.6.1"
+    // Room + FTS (temporarily disabled due to KAPT issues)
+    // implementation "androidx.room:room-runtime:2.6.1"
+    // implementation "androidx.room:room-ktx:2.6.1"
+    // kapt "androidx.room:room-compiler:2.6.1"
 
     // WorkManager
     implementation "androidx.work:work-runtime-ktx:2.9.0"
 
-    // Glide for image loading
-    implementation "com.github.bumptech.glide:glide:4.16.0"
-    kapt "com.github.bumptech.glide:compiler:4.16.0"
+    // Glide for image loading (temporarily disabled due to KAPT issues)
+    // implementation "com.github.bumptech.glide:glide:4.16.0"
+    // kapt "com.github.bumptech.glide:compiler:4.16.0"
 
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
