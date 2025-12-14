@@ -1,30 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:text="Screenshot OCR"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:layout_marginBottom="32dp"/>
-
-    <Button
-        android:id="@+id/btnScan"
-        android:text="Scan Screenshots"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"/>
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/btnSearch"
-        android:text="Search Text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:text="Offline OCR Scanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"/>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnScan"
+            android:text="Take Photo &amp; Extract Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnGallery"
+            android:text="Choose from Gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:text="Select an image to extract text using offline OCR"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:background="@android:color/background_light"
+            android:textIsSelectable="true"/>
+
+    </LinearLayout>
+
+</ScrollView>
